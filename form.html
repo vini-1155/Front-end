@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+    <style>
+        footer{
+            padding-top: 160px;
+        }
+        input[type=submit]{
+            padding-left: 30px;
+        }
+        body{
+            background-image: url(bg.png);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        *{
+            color: aliceblue;
+        }
+        #sub{
+            color: black;
+        }
+
+        input:focus{
+            background-color: dimgrey;
+        }
+        textarea:focus{
+            background-color: dimgrey;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Delivery Form</h1>
+        <table cellspacing="30px" >
+            <form action="" method="post"></form>
+            <tr>
+                <td> <label for="fname">First Name: </label> </td>
+                <td> <input type="text" name="fname" id="fname"> </label></td>
+            </tr>
+            <tr>
+                <td> <label for="lname">Last Name: </label></td>
+                <td><input type="text" name="lname" id="lname"> </td>
+            </tr>
+            <tr>
+                <td><label for="male">Gender</label></td>
+                <td> <label for="male">Male</label><input type="radio" name="gender" id="male">
+                    <label for="female">Female</label><input type="radio" name="gender" id="female">
+                    <label for="others">Others</label><input type="radio" name="gender" id="others">
+                </td>
+            </tr>
+            <tr>
+                <td> <label for="phnor">Ph no: </label><select name="contrycode" id="contrycode">
+                        <option value="+91">+91 India</option>
+                        <option value="+98">+81 USA</option>
+                        <option value="+92">+92 Nepal</option>
+                        <option value="+94">+94 Sri Lanka</option>
+                    </select> </td>
+                <td><input type="number" name="phone" id="phnor"></td>
+            </tr>
+            <tr>
+                <td> <label for="dob">Date of Birth</label> </td>
+                <td> <input type="date" name="dob" id="dob"> </td>
+            </tr>
+            <tr>
+                <td> <label for="addr">Address</label></td>
+                <td><textarea name="addr" id="addr" cols="30" rows="10"></textarea> </td>
+            </tr>
+            <tr>
+                <td> Location:</td>
+                <td>
+                    <input type="checkbox" name="banglore" id="bang">
+                    <label for="bang">banglore</label>
+
+                    <input type="checkbox" name="chennai" id="chenn">
+                    <label for="chenn">chennai</label>
+                    <input type="checkbox" name="pune" id="pune">
+                    <label for="pune">pune</label>
+                    <input type="checkbox" name="mysore" id="mysore">
+                    <label for="mysore">mysore</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" id="sub" value="Submit"></td>
+            </tr>
+            <tfoot>
+                <td colspan="2">
+                    <footer >
+                        <center>
+                            Contact: 1234567890 <br>
+                            Email:something@gmail.com
+                            &copy;KalzBrgr
+                            <br>
+                            <address>Banglore, Chennai, Mumbai</address> <br>
+                        </center>
+                    </footer>
+                </td>
+            </tfoot>
+        </table>
+    </center>
+    </form>
+
+</body>
+
+</html>

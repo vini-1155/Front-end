@@ -4,3 +4,50 @@ input[type="submit"]{
     padding-right: 30px;
 }
 
+footer {
+    padding-top: 160px;
+}
+
+input[type=submit] {
+    padding-left: 30px;
+}
+
+body {
+    background-image: url(bg.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+* {
+    color: aliceblue;
+}
+
+#sub {
+    color: black;
+}
+
+input[type=text]:focus{
+    background-color: rgba(221, 153, 153, 0.48);
+}
+
+input[type=number]:focus{
+    background-color: rgba(221, 153, 153, 0.48);
+}
+
+textarea:focus {
+    background-color: rgba(105, 105, 105, 0.561);
+}
+
+li:hover{
+    background: #ffffff48;
+    color: aliceblue;
+}
+img{
+    height: 700px;
+    width: 500px;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 5px;
+}

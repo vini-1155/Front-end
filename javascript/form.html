@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <titile>
+            Form Validation
+        </titile>
+        <style>
+            .error
+            {
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Form Validation Example</h2>
+        <form id="myForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name1" name="name"><br>
+            <span id="nameError" class="error"></span><br>
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age"><br>
+            <span id="ageError" class="error"></span><br>
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            function validateForm()
+            {
+                var name=document.getElementById("name1").value;
+                var age=document.getElementById("age").value;
+                var nameError=document.getElementById("nameError");
+                var ageError=document.getElementById("ageError");
+                var isValid=true;
+                nameError.textContent="";
+                ageError.textContent="";
+                if(name==="")
+                {
+                    nameError.textContent="Name is requried";
+                    isValid=false;
+                }
+                if(age===" ")
+                {
+                    ageError.textContent="Age is requried";
+                    isValid=false;
+                }
+                else if(isNaN(age)||age<18)
+                {
+                    ageError.textContent="Age must be a number and at least 18";
+                    isValid=false;
+                }
+                return isValid;
+            }
+        </script>
+    </body>
+</html>

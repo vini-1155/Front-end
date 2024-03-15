@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Validation</h1>
+    <script>
+        function validPhoneNUmber(num){
+            let re = /^[9876]\d{9}$/;
+            // let results = num.test(re);
+            let results = re.test(num);
+            if(results){
+                alert("The number is Valid");
+            }else{
+                let num = prompt("Enter 10 digit number: ");
+                validPhoneNUmber(num);
+            }
+        }
+
+        function validEmail(email){
+            let re = /\S+@\S+\.(\S{2,4})$/g;
+
+            let results = re.test(email);
+            if(results){
+                alert("The email is valid!!");
+            }else{
+                var Email = prompt("Enter the email address")
+                 validEmail(Email);
+            }
+
+        }
+
+        // var phoneNumber = prompt("Enter the 10 Digit Number");
+        // validPhoneNUmber(phoneNumber);
+
+        var Email = prompt("Enter the email address")
+        validEmail(Email);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Ajax with JQuery</h1>
+    <img src="download.jpg" alt="">
+    <div id="result">Initial Content</div>
+    <script>
+        $(document).ready(function(){
+            $('#fetchDataBtn').click(function(){
+                $.ajax({
+                    url: "example.html",
+                    type:"GET",
+                    success : function(response){
+                        $("#result").html(response);
+                    },
+                    error: function(xhr, status, error){
+                        console.log("web page not loaded", error);
+                    }
+                });
+            });
+        });
+    </script>
+    <button id="fetchDataBtn">Fetch Data</button>
+</body>
+</html>
